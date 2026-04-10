@@ -1,0 +1,582 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animate-scroll-appear {
+    animation: scroll-appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+  }
+}
+
+:root {
+  --school-title: #006bff;
+  --school-address: #006bff;
+
+  --sidebar-bg: #ffffff;
+  --sidebar-text: #075985;
+  --sidebar-hover: #4e71ff;
+  --sidebar-icon: #075985;
+
+  --general-bg: #e6ebee;
+  --secondary-bg: #c5cae9;
+  --white-bg: #ffffff;
+
+  --primary: #075985;
+  --secondary: #b6b09f;
+  --third: #e6ebee;
+  --title: #075985;
+  --sub-title: #4e71ff;
+  --t-white: #ffffff;
+  --t-gray: #747264;
+
+  --bt-bg: #4d44b5;
+
+  --present-color: #075985;
+  --absent-color: #c5cae9;
+  --boys-color: #075985;
+  --girls-color: #c5cae9;
+}
+.custom-toast {
+  background: #1f4e79;     
+  color: #fff;              
+  border-radius: 12px;    
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 1rem 1.2rem !important;
+  display: flex !important;
+  align-items: center;
+  gap: 0.6rem;
+  border-left: 6px solid #f5a623;
+  animation: slideIn 0.4s ease-out;
+}
+
+/* Body text inside the toast */
+.custom-toast-body {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Progress bar styling */
+.custom-progress {
+  background: #f5a623 !important; 
+  height: 4px !important;
+  border-radius: 2px !important;
+}
+
+/* Toast slide-in animation */
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+.theme-red {
+  --school-title: #b91c1c;
+  --school-address: #b91c1c;
+  --sidebar-bg: #ffffff;
+  --sidebar-text: #7f1d1d;
+  --sidebar-hover: #fca5a5;
+  --sidebar-icon: #dc2626;
+  --general-bg: #fff1f1;
+  --secondary-bg: #fecaca;
+  --white-bg: #ffffff;
+  --primary: #dc2626;
+  --secondary: #f87171;
+  --third: #fee2e2;
+  --title: #7f1d1d;
+  --sub-title: #991b1b;
+  --t-white: #ffffff;
+  --t-gray: #525252;
+  --bt-bg: #b91c1c;
+  --present-color: #dc2626;
+  --absent-color: #fecaca;
+  --boys-color: #dc2626;
+  --girls-color: #fca5a5;
+}
+
+.theme-orange {
+  --school-title: #ea580c;
+  --school-address: #ea580c;
+  --sidebar-bg: #ffffff;
+  --sidebar-text: #9a3412;
+  --sidebar-hover: #fdba74;
+  --sidebar-icon: #fb923c;
+  --general-bg: #fff7ed;
+  --secondary-bg: #ffe6c7;
+  --white-bg: #ffffff;
+  --primary: #ea580c;
+  --secondary: #f97316;
+  --third: #ffedd5;
+  --title: #7c2d12;
+  --sub-title: #b45309;
+  --t-white: #ffffff;
+  --t-gray: #92400e;
+  --bt-bg: #ea580c;
+  --present-color: #ea580c;
+  --absent-color: #ffe6c7;
+  --boys-color: #ea580c;
+  --girls-color: #fdba74;
+}
+
+.theme-blue {
+  --school-title: #004ba0;
+  --school-address: #004ba0;
+  --sidebar-bg: #ffffff;
+  --sidebar-text: #0a3d62;
+  --sidebar-hover: #1e88e5;
+  --sidebar-icon: #1565c0;
+  --general-bg: #e3f2fd;
+  --secondary-bg: #bbdefb;
+  --white-bg: #ffffff;
+  --primary: #0d47a1;
+  --secondary: #5c6bc0;
+  --third: #90caf9;
+  --title: #0b2545;
+  --sub-title: #1e3a8a;
+  --t-white: #ffffff;
+  --t-gray: #607d8b;
+  --bt-bg: #1e88e5;
+  --present-color: #0d47a1;
+  --absent-color: #bbdefb;
+  --boys-color: #0d47a1;
+  --girls-color: #90caf9;
+}
+
+.theme-green {
+  --school-title: #2e7d32;
+  --school-address: #2e7d32;
+
+  --sidebar-bg: #ffffff;
+  --sidebar-text: #1b5e20;
+  --sidebar-hover: #43a047;
+  --sidebar-icon: #388e3c;
+
+  --general-bg: #e8f5e9;
+  --secondary-bg: #c8e6c9;
+  --white-bg: #ffffff;
+
+  --primary: #2e7d32;
+  --secondary: #66bb6a;
+  --third: #a5d6a7;
+
+  --title: #1b4332;
+  --sub-title: #2f855a;
+  --t-white: #ffffff;
+  --t-gray: #607d8b;
+
+  --bt-bg: #43a047;
+
+  --present-color: #2e7d32;
+  --absent-color: #a5d6a7;
+
+  --boys-color: #388e3c;
+  --girls-color: #81c784;
+}
+
+.theme-dark {
+  --school-title: #a5d8ff;
+  --school-address: #a5d8ff;
+
+  --sidebar-bg: #0b1120;
+  --sidebar-text: #e5e7eb;
+  --sidebar-hover: #3b82f6;
+  --sidebar-icon: #60a5fa;
+
+  --general-bg: #111827;
+  --secondary-bg: #1f2937;
+  --white-bg: #1c2431;
+
+  --primary: #3b82f6;
+  --secondary: #60a5fa;
+  --third: #1e3a8a;
+
+  --title: #e0f2fe;
+  --sub-title: #93c5fd;
+  --t-white: #f3f4f6;
+  --t-gray: #9ca3af;
+
+  --bt-bg: #2563eb;
+
+  --present-color: #60a5fa;
+  --absent-color: #475569;
+
+  --boys-color: #60a5fa;
+  --girls-color: #a5b4fc;
+}
+.react-time-picker__wrapper {
+  border: 1px solid #d1d5db; /* Tailwind gray-300 */
+  border-radius: 0.5rem; /* rounded-lg */
+  padding: 0.4rem 0.6rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.react-time-picker__inputGroup__input {
+  min-width: 6ch;
+  border: none;
+  text-align: center;
+  font-size: 0.875rem; /* text-sm */
+  color: #111827; /* Tailwind gray-900 */
+}
+
+.react-time-picker__inputGroup__input:focus {
+  outline: none;
+}
+
+.react-time-picker__button {
+  color: #6b7280; /* gray-500 */
+  padding: 0.25rem;
+  transition: color 0.2s;
+}
+
+.react-time-picker__button:hover {
+  color: #111827; /* gray-900 */
+}
+
+/* 
+.dots-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 150px;
+}
+
+.dot {
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+  border-radius: 10px;
+  background-color: #b3d4fc;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.dot:last-child {
+  margin-right: 0;
+}
+
+.dot:nth-child(1) {
+  animation-delay: -0.3s;
+}
+
+.dot:nth-child(2) {
+  animation-delay: -0.1s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.1s;
+}
+
+.dot:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.dot:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+    background-color: #b3d4fc;
+    box-shadow: 0 0 0 0 rgba(178, 212, 252, 0.7);
+  }
+
+  50% {
+    transform: scale(1.2);
+    background-color: #6793fb;
+    box-shadow: 0 0 0 10px rgba(178, 212, 252, 0);
+  }
+
+  100% {
+    transform: scale(0.8);
+    background-color: #b3d4fc;
+    box-shadow: 0 0 0 0 rgba(178, 212, 252, 0.7);
+  }
+}
+
+ */
+
+/* From Uiverse.io by gustavofusco */
+.pencil {
+  display: block;
+  width: 10em;
+  height: 10em;
+}
+
+.pencil__body1,
+.pencil__body2,
+.pencil__body3,
+.pencil__eraser,
+.pencil__eraser-skew,
+.pencil__point,
+.pencil__rotate,
+.pencil__stroke {
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.pencil__body1,
+.pencil__body2,
+.pencil__body3 {
+  transform: rotate(-90deg);
+}
+
+.pencil__body1 {
+  animation-name: pencilBody1;
+}
+
+.pencil__body2 {
+  animation-name: pencilBody2;
+}
+
+.pencil__body3 {
+  animation-name: pencilBody3;
+}
+
+.pencil__eraser {
+  animation-name: pencilEraser;
+  transform: rotate(-90deg) translate(49px, 0);
+}
+
+.pencil__eraser-skew {
+  animation-name: pencilEraserSkew;
+  animation-timing-function: ease-in-out;
+}
+
+.pencil__point {
+  animation-name: pencilPoint;
+  transform: rotate(-90deg) translate(49px, -30px);
+}
+
+.pencil__rotate {
+  animation-name: pencilRotate;
+}
+
+.pencil__stroke {
+  animation-name: pencilStroke;
+  transform: translate(100px, 100px) rotate(-113deg);
+}
+
+/* Animations */
+@keyframes pencilBody1 {
+  from,
+  to {
+    stroke-dashoffset: 351.86;
+    transform: rotate(-90deg);
+  }
+
+  50% {
+    stroke-dashoffset: 150.8;
+    /* 3/8 of diameter */
+    transform: rotate(-225deg);
+  }
+}
+
+@keyframes pencilBody2 {
+  from,
+  to {
+    stroke-dashoffset: 406.84;
+    transform: rotate(-90deg);
+  }
+
+  50% {
+    stroke-dashoffset: 174.36;
+    transform: rotate(-225deg);
+  }
+}
+
+@keyframes pencilBody3 {
+  from,
+  to {
+    stroke-dashoffset: 296.88;
+    transform: rotate(-90deg);
+  }
+
+  50% {
+    stroke-dashoffset: 127.23;
+    transform: rotate(-225deg);
+  }
+}
+
+@keyframes pencilEraser {
+  from,
+  to {
+    transform: rotate(-45deg) translate(49px, 0);
+  }
+
+  50% {
+    transform: rotate(0deg) translate(49px, 0);
+  }
+}
+
+@keyframes pencilEraserSkew {
+  from,
+  32.5%,
+  67.5%,
+  to {
+    transform: skewX(0);
+  }
+
+  35%,
+  65% {
+    transform: skewX(-4deg);
+  }
+
+  37.5%,
+  62.5% {
+    transform: skewX(8deg);
+  }
+
+  40%,
+  45%,
+  50%,
+  55%,
+  60% {
+    transform: skewX(-15deg);
+  }
+
+  42.5%,
+  47.5%,
+  52.5%,
+  57.5% {
+    transform: skewX(15deg);
+  }
+}
+
+@keyframes pencilPoint {
+  from,
+  to {
+    transform: rotate(-90deg) translate(49px, -30px);
+  }
+
+  50% {
+    transform: rotate(-225deg) translate(49px, -30px);
+  }
+}
+
+@keyframes pencilRotate {
+  from {
+    transform: translate(100px, 100px) rotate(0);
+  }
+
+  to {
+    transform: translate(100px, 100px) rotate(720deg);
+  }
+}
+
+@keyframes pencilStroke {
+  from {
+    stroke-dashoffset: 439.82;
+    transform: translate(100px, 100px) rotate(-113deg);
+  }
+
+  50% {
+    stroke-dashoffset: 164.93;
+    transform: translate(100px, 100px) rotate(-113deg);
+  }
+
+  75%,
+  to {
+    stroke-dashoffset: 439.82;
+    transform: translate(100px, 100px) rotate(112deg);
+  }
+}
+
+ @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fadeInUp {
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+/* .custom-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: transparent;
+} */
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+  scroll-margin-: 5%;
+  display: none;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 2px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Ensure Quill-rendered lists and links are styled correctly */
+.ql-editor {
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.ql-editor ul,
+.ql-editor ol {
+  padding-left: 1.5em;
+}
+
+.ql-editor ul {
+  list-style-type: disc;
+}
+
+.ql-editor ol {
+  list-style-type: decimal;
+}
+
+.ql-editor li {
+  margin-bottom: 0.3em;
+}
+
+.ql-editor a {
+  color: #1d4ed8;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.ql-editor-view {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+.rounded-bottom {    
+  height: 100px;       /* adjust as needed */
+  background-color: #c114d1; /* example color */
+  border-bottom-left-radius: 150px;  /* fully rounded bottom-left */
+  border-bottom-right-radius: 150px; /* fully rounded bottom-right */
+}
+
+
+   
+
+
