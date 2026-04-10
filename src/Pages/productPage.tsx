@@ -40,6 +40,7 @@ function ProductPage() {
 
     const fetchProducts = async () => {
         const res = await api.get("/products");
+        console.log(res,"productgetttttt")
         setProducts(res.data.data.data);
     };
     const fetchBrands = async () => {

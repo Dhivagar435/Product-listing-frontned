@@ -170,9 +170,6 @@ function BrandPage() {
                                     <td style={{ padding: "16px 20px", color: "#bbb", fontSize: 13 }}>{i + 1}</td>
                                     <td style={{ padding: "16px 20px" }}>
                                         <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                                            <div style={{ width: 34, height: 34, background: "#f0f4ff", borderRadius: 8, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 16 }}>
-                                                🏢
-                                            </div>
                                             <span style={{ fontWeight: 500, color: "#1a1a2e", fontSize: 15 }}>{brand.name}</span>
                                         </div>
                                     </td>
