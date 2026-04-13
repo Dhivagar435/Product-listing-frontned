@@ -1,4 +1,4 @@
-import api from "../interceptor/jwtToken";
+import api from "../interceptor/axios";
 import { useEffect, useState } from "react";
 
 interface Brand { id: number; name: string; }
@@ -40,7 +40,7 @@ function ProductPage() {
 
     const fetchProducts = async () => {
         const res = await api.get("/products");
-        console.log(res,"productgetttttt")
+        console.log(res, "productgetttttt")
         setProducts(res.data.data.data);
     };
     const fetchBrands = async () => {
@@ -230,7 +230,7 @@ function ProductPage() {
                                             {imageFiles.map((_, i) => (
                                                 <div key={i} style={{ position: "relative" }}>
                                                     <img
-                                                        src={previewUrls[i]}   
+                                                        src={previewUrls[i]}
                                                         style={{ width: 80, height: 80, objectFit: "cover", borderRadius: 10, border: "2px solid #e0e0e0", display: "block" }}
                                                         alt={`preview-${i}`}
                                                     />
@@ -278,13 +278,13 @@ function ProductPage() {
                     </div>
                 )}
 
-              
+
                 <div style={{ marginBottom: 24 }}>
                     <input type="text" placeholder="🔍  Search by name, SKU or category..." value={search} onChange={e => setSearch(e.target.value)}
                         style={{ ...inputStyle, background: "#fff", padding: "13px 18px", fontSize: 15, boxShadow: "0 2px 12px rgba(0,0,0,0.05)" }} />
                 </div>
 
-             
+
                 <div style={{ background: "#fff", borderRadius: 16, overflow: "hidden", boxShadow: "0 4px 24px rgba(0,0,0,0.06)", marginBottom: 40 }}>
                     <table style={{ width: "100%", borderCollapse: "collapse" }}>
                         <thead>

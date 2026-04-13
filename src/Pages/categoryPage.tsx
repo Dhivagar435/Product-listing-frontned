@@ -1,4 +1,4 @@
-import api from "../interceptor/jwtToken";
+import api from "../interceptor/axios";
 import { useEffect, useState } from "react";
 
 interface Category {
